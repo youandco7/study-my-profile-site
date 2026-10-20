@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코코넛 | Business Builder · Creator</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#f3f6fb',
+                            100: '#e7eef7',
+                            200: '#d4e3f1',
+                            300: '#b3cce7',
+                            400: '#7fa6d1',
+                            500: '#5580b6',
+                            600: '#3d5f99',
+                            700: '#2c3e5f',
+                            800: '#2a3c54',
+                            900: '#1b2a4a',
+                            950: '#0f1620',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white dark:bg-slate-950 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-950/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+            <div class="flex items-center justify-between">
+                <a href="#home" class="text-lg font-black text-gray-900 dark:text-white tracking-tight hover:text-navy-700 dark:hover:text-navy-400 transition">
+                    Coconut
+                </a>
+
+                <div class="flex items-center gap-8">
+                    <div class="hidden sm:flex gap-8">
+                        <a href="#about" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-navy-700 dark:hover:text-navy-400 transition">About</a>
+                        <a href="#business" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-navy-700 dark:hover:text-navy-400 transition">Business</a>
+                        <a href="#projects" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-navy-700 dark:hover:text-navy-400 transition">Projects</a>
+                        <a href="#contact" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-navy-700 dark:hover:text-navy-400 transition">Contact</a>
+                    </div>
+
+                    <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                        <span id="darkModeIcon" class="text-lg">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-background min-h-screen bg-white dark:bg-slate-950 flex items-center justify-center pt-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4 opacity-0 animate-fade-in" style="animation-delay: 0s;">
+                <p class="text-sm font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase">Digital Creator</p>
+            </div>
+
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 text-gray-900 dark:text-white opacity-0 animate-fade-in" style="animation-delay: 0.1s; letter-spacing: -0.02em;">
+                Coconut
+            </h1>
+
+            <div class="mb-8 h-20 sm:h-24 flex items-center justify-center opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
+                <p class="text-3xl sm:text-4xl lg:text-5xl font-black text-navy-700 dark:text-navy-400 tracking-tight">
+                    <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+                </p>
+            </div>
+
+            <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in" style="animation-delay: 0.3s;">
+                실행으로 가치를 만들고,<br />브랜드를 성장시키며,<br />새로운 기회를 현실로 만드는 사업가입니다.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in" style="animation-delay: 0.4s;">
+                <a href="#contact" class="btn-premium bg-navy-700 hover:bg-navy-800 dark:bg-navy-600 dark:hover:bg-navy-500 text-white font-semibold py-3.5 px-8 rounded-xl transition duration-300">
+                    Let's Talk
+                </a>
+                <a href="#projects" class="btn-premium border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:border-navy-700 dark:hover:border-navy-400 hover:text-navy-700 dark:hover:text-navy-400 font-semibold py-3.5 px-8 rounded-xl transition duration-300">
+                    View Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="subtle-background bg-navy-50 dark:bg-navy-950 py-24 sm:py-32 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
+                <div class="lg:w-1/3 stat-reveal" style="transition-delay: 0ms;">
+                    <p class="text-sm font-semibold tracking-widest text-navy-700 dark:text-navy-400 uppercase mb-3">Track Record</p>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">숫자로 증명된 신뢰와 협업의 기록입니다.</p>
+                </div>
+                <div class="lg:w-2/3 flex flex-nowrap overflow-x-auto gap-x-8 sm:gap-x-10 lg:gap-x-12 pb-1">
+                    <div class="group stat-item stat-reveal relative pl-5 sm:pl-6 flex-shrink-0" style="transition-delay: 100ms;">
+                        <span class="stat-divider absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-navy-700 dark:group-hover:bg-navy-400"></span>
+                        <div class="stat-number whitespace-nowrap origin-left text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-2 transition-transform duration-300 group-hover:scale-105 group-hover:text-navy-700 dark:group-hover:text-navy-400" data-target="150" data-suffix="+">0</div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap">Partners</p>
+                    </div>
+                    <div class="group stat-item stat-reveal relative pl-5 sm:pl-6 flex-shrink-0" style="transition-delay: 200ms;">
+                        <span class="stat-divider absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-navy-700 dark:group-hover:bg-navy-400"></span>
+                        <div class="stat-number whitespace-nowrap origin-left text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-2 transition-transform duration-300 group-hover:scale-105 group-hover:text-navy-700 dark:group-hover:text-navy-400" data-target="70" data-suffix="+">0</div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap">Brands</p>
+                    </div>
+                    <div class="group stat-item stat-reveal relative pl-5 sm:pl-6 flex-shrink-0" style="transition-delay: 300ms;">
+                        <span class="stat-divider absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-navy-700 dark:group-hover:bg-navy-400"></span>
+                        <div class="stat-number whitespace-nowrap origin-left text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-2 transition-transform duration-300 group-hover:scale-105 group-hover:text-navy-700 dark:group-hover:text-navy-400" data-target="1200" data-suffix="+">0</div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap">Collaborations</p>
+                    </div>
+                    <div class="group stat-item stat-reveal relative pl-5 sm:pl-6 flex-shrink-0" style="transition-delay: 400ms;">
+                        <span class="stat-divider absolute left-0 top-0 bottom-0 w-px bg-gray-200 dark:bg-gray-800 group-hover:bg-navy-700 dark:group-hover:bg-navy-400"></span>
+                        <div class="stat-number whitespace-nowrap origin-left text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-2 transition-transform duration-300 group-hover:scale-105 group-hover:text-navy-700 dark:group-hover:text-navy-400" data-target="93" data-suffix="%">0</div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium whitespace-nowrap">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-white dark:bg-slate-950 py-24 sm:py-40 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-20">
+                <div class="lg:w-1/3 fade-in-up">
+                    <h2 class="text-5xl sm:text-6xl font-black text-gray-900 dark:text-white tracking-tight mb-6">About</h2>
+                    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">아이디어를 현실로 만들고, 성장과 혁신을 통해 새로운 가치를 창출하는 사업가입니다.</p>
+                </div>
+                <div class="lg:w-2/3 flex flex-col">
+                    <div class="fade-in-up border-t border-gray-200 dark:border-gray-800 py-8 flex items-start gap-6">
+                        <span class="text-sm font-semibold text-navy-700 dark:text-navy-400 pt-1">01</span>
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 text-gray-900 dark:text-white">Build</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">아이디어를 현실로 만드는 과정에서 혁신과 전략을 실행합니다.</p>
+                        </div>
+                    </div>
+                    <div class="fade-in-up border-t border-gray-200 dark:border-gray-800 py-8 flex items-start gap-6">
+                        <span class="text-sm font-semibold text-navy-700 dark:text-navy-400 pt-1">02</span>
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 text-gray-900 dark:text-white">Growth</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">지속적인 성장과 개선으로 더 나은 결과를 만들어갑니다.</p>
+                        </div>
+                    </div>
+                    <div class="fade-in-up border-t border-b border-gray-200 dark:border-gray-800 py-8 flex items-start gap-6">
+                        <span class="text-sm font-semibold text-navy-700 dark:text-navy-400 pt-1">03</span>
+                        <div>
+                            <h3 class="text-2xl font-black mb-3 text-gray-900 dark:text-white">Innovate</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-xl">새로운 시각과 창의력으로 차별화된 해결책을 제시합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section (formerly Skills) -->
+    <section id="business" class="bg-gray-50 dark:bg-slate-900 py-24 sm:py-40 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 fade-in-up">
+                <p class="text-sm font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">What I Do</p>
+                <h2 class="text-5xl sm:text-6xl font-black text-gray-900 dark:text-white tracking-tight">Core Competencies</h2>
+            </div>
+            <div id="featureTabs" class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+                <div id="activeCard" class="lg:col-span-7 card-premium bg-white dark:bg-slate-800 rounded-xl p-10 sm:p-12 border-l-4 border-navy-700 dark:border-navy-400 fade-in-up">
+                    <div id="activeCardContent" class="transition-all duration-300 ease-out">
+                        <span id="activeNum" class="text-sm font-semibold text-navy-700 dark:text-navy-400">01</span>
+                        <h3 id="activeTitle" class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white mt-4 mb-4">Strategy</h3>
+                        <p id="activeDesc" class="text-gray-700 dark:text-gray-300 leading-relaxed max-w-md">비즈니스 목표를 달성하기 위한 명확한 전략과 실행 계획을 수립합니다.</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex flex-col fade-in-up">
+                    <div class="w-full h-[3px] bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden mb-8">
+                        <div id="progressFill" class="progress-fill h-full bg-navy-700 dark:bg-navy-400 rounded-full"></div>
+                    </div>
+                    <div id="tabList" class="flex flex-col divide-y divide-gray-200 dark:divide-gray-800 border-t border-b border-gray-200 dark:border-gray-800">
+                        <button type="button" class="text-left py-6 transition-all duration-300 hover:translate-x-1 hover:opacity-80 focus:outline-none">
+                            <span class="text-sm font-semibold text-navy-700 dark:text-navy-400">02</span>
+                            <h3 class="text-xl font-black text-gray-900 dark:text-white mt-2 mb-2">Execution</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">계획을 현실로 변환하는 강한 실행력과 적응력을 갖추고 있습니다.</p>
+                        </button>
+                        <button type="button" class="text-left py-6 transition-all duration-300 hover:translate-x-1 hover:opacity-80 focus:outline-none">
+                            <span class="text-sm font-semibold text-navy-700 dark:text-navy-400">03</span>
+                            <h3 class="text-xl font-black text-gray-900 dark:text-white mt-2 mb-2">Innovation</h3>
+                            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">시장의 변화에 빠르게 대응하며 새로운 기회를 창출합니다.</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white dark:bg-slate-950 py-24 sm:py-40 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-16 lg:mb-24 fade-in-up">
+                <p class="text-sm font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-3">Portfolio</p>
+                <h2 class="text-5xl sm:text-6xl font-black text-gray-900 dark:text-white tracking-tight">Featured Projects</h2>
+            </div>
+
+            <!-- Project 1: full-width featured image, asymmetric text below -->
+            <div class="fade-in-up mb-20 lg:mb-28">
+                <div class="aspect-[16/9] sm:aspect-[21/9] bg-gradient-to-br from-navy-400 to-navy-600 rounded-2xl mb-8"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+                    <div class="lg:col-span-5">
+                        <p class="text-xs font-semibold tracking-widest text-navy-700 dark:text-navy-400 uppercase mb-3">Strategy · Design</p>
+                        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white">Personal Branding Platform</h3>
+                    </div>
+                    <div class="lg:col-span-6 lg:col-start-7">
+                        <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">개인 브랜드를 구축하고 성장시키는 통합 플랫폼을 설계했습니다.</p>
+                        <a href="#" class="text-navy-700 dark:text-navy-400 hover:text-navy-900 dark:hover:text-navy-200 font-semibold text-sm transition">
+                            View Case →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: image left, text right -->
+            <div class="fade-in-up mb-20 lg:mb-28 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-slate-400 to-slate-600 rounded-2xl"></div>
+                </div>
+                <div class="lg:col-span-5">
+                    <p class="text-xs font-semibold tracking-widest text-slate-600 dark:text-slate-400 uppercase mb-3">Consulting · Execution</p>
+                    <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Business Growth Initiative</h3>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">다양한 스타트업의 비즈니스 성장 전략을 수립 및 실행했습니다.</p>
+                    <a href="#" class="text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 font-semibold text-sm transition">
+                        View Case →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3: text left, image right (reversed) -->
+            <div class="fade-in-up grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <p class="text-xs font-semibold tracking-widest text-gray-600 dark:text-gray-400 uppercase mb-3">Community · Partnership</p>
+                    <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-4">Creative Collaboration Network</h3>
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">크리에이터와 브랜드를 연결하는 협업 네트워크를 구축했습니다.</p>
+                    <a href="#" class="text-gray-700 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 font-semibold text-sm transition">
+                        View Case →
+                    </a>
+                </div>
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <div class="aspect-[4/3] bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-50 dark:bg-slate-900 py-24 sm:py-32 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm font-semibold tracking-widest text-gray-500 dark:text-gray-400 uppercase mb-6">Get In Touch</p>
+            <h2 class="text-4xl font-black mb-6 text-gray-900 dark:text-white tracking-tight">다음 기회는 당신과 함께일지도 모릅니다.</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-xl mx-auto leading-relaxed">
+                프로젝트, 협업, 새로운 아이디어가 있다면 언제든 편하게 연락해 주세요.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="mailto:ceo@coconut.com" class="btn-premium bg-navy-700 hover:bg-navy-800 dark:bg-navy-600 dark:hover:bg-navy-500 text-white font-semibold py-3.5 px-8 rounded-xl transition duration-300">
+                    Let's Talk
+                </a>
+                <a href="#projects" class="btn-premium border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:border-navy-700 dark:hover:border-navy-400 hover:text-navy-700 dark:hover:text-navy-400 font-semibold py-3.5 px-8 rounded-xl transition duration-300">
+                    View Portfolio
+                </a>
+            </div>
+
+            <div class="flex justify-center gap-6">
+                <a href="mailto:ceo@coconut.com" class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-400 hover:border-navy-700 dark:hover:border-navy-400 hover:text-navy-700 dark:hover:text-navy-400 flex items-center justify-center transition duration-300" title="Email">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/coconut" target="_blank" class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-400 hover:border-navy-700 dark:hover:border-navy-400 hover:text-navy-700 dark:hover:text-navy-400 flex items-center justify-center transition duration-300" title="Instagram">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.057-1.645.069-4.849.069-3.203 0-3.584-.012-4.849-.069-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.322a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"></path>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/coconut" target="_blank" class="w-12 h-12 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-400 hover:border-navy-700 dark:hover:border-navy-400 hover:text-navy-700 dark:hover:text-navy-400 flex items-center justify-center transition duration-300" title="LinkedIn">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 6H5v12h8V9m-8 3h8m0 0v6m0-6a6 6 0 016 6v3m-6-9h.01M9 16h.01"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 dark:bg-black text-gray-300 py-8 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">&copy; 2024 Coconut. All rights reserved.</p>
+            <p class="text-xs text-gray-600 mt-2">Designed and built with intention</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
